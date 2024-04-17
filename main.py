@@ -10,7 +10,6 @@ def start_tictactoe():
 
     root = tk.Tk()
  
-# Funktion zum Erstellen der Datenbanktabelle
 def create_table():
     conn = sqlite3.connect('gewinner.db')
     c = conn.cursor()
@@ -19,7 +18,6 @@ def create_table():
     conn.commit()
     conn.close()
 
-# Funktion zum Einfügen des Gewinners in die Datenbank
 def insert_winner(winner):
     conn = sqlite3.connect('gewinner.db')
     c = conn.cursor()
@@ -27,7 +25,6 @@ def insert_winner(winner):
     conn.commit()
     conn.close()
 
-# Funktion zum Abrufen der Gewinner aus der Datenbank
 def get_winners():
     conn = sqlite3.connect('gewinner.db')
     c = conn.cursor()
@@ -36,18 +33,14 @@ def get_winners():
     conn.close()
     return winners
 
-# Funktion zum Starten des Tic Tac Toe Spiels
 def start_tictactoe():
     def check_winner(board):
-        # Überprüfung der Zeilen
         for row in board:
             if len(set(row)) == 1 and row[0] != "":
                 return row[0]
-        # Überprüfung der Spalten
         for col in range(3):
             if len(set([board[row][col] for row in range(3)])) == 1 and board[0][col] != "":
                 return board[0][col]
-        # Überprüfung der Diagonalen
         if len(set([board[i][i] for i in range(3)])) == 1 and board[0][0] != "":
             return board[0][0]
         if len(set([board[i][2 - i] for i in range(3)])) == 1 and board[0][2] != "":
@@ -81,7 +74,6 @@ def start_tictactoe():
         turn = "X"
         label.config(text="Nächster Spieler: X")
 
-    # GUI für Tic Tac Toe
     root = tk.Tk()
     root.title("Tic Tac Toe")
 
@@ -105,7 +97,6 @@ def start_tictactoe():
 
     root.mainloop()
 
-# Hauptmenü
 def main_menu():
     create_table()
     while True:
@@ -145,7 +136,6 @@ def safe_input(prompt):
     except EOFError:
         return None
     
-# Login-Funktion
 def login():
     valid_password = "1234"
     while True:
@@ -161,9 +151,6 @@ def login():
             return True
         else:
             print("Ungültige Anmeldeinformationen. Bitte versuchen Sie es erneut.")
-
-
-
 
 if __name__ == "__main__":
     if login():
