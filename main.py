@@ -9,7 +9,7 @@ def start_tictactoe():
         return
 
     root = tk.Tk()
-    
+ 
 # Funktion zum Erstellen der Datenbanktabelle
 def create_table():
     conn = sqlite3.connect('gewinner.db')
