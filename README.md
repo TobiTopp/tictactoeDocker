@@ -49,4 +49,3 @@ Für die Nutzung der grafischen Benutzeroberfläche ist ein funktionierendes Dis
 Bei Fragen oder Problemen zu diesem Projekt kannst du dich jederzeit an Cem Akkaya oder Tobias Topp wenden.
 ```
 
-Dieser Text bietet eine klare und präzise Anleitung für Nutzer, die dein Projekt aus GitHub herunterladen und ausführen möchten. Du kannst diesen Inhalt direkt in deine `README.md`-Datei auf GitHub kopieren.
