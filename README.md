@@ -1,4 +1,4 @@
-Hier ist ein Beispiel für einen `README.md`-Inhalt, den du direkt in ein GitHub-Repository für dein Tic Tac Toe Projekt mit Tkinter und Docker einfügen kannst:
+
 
 ```markdown
 # Tic Tac Toe Spiel mit Tkinter GUI
