@@ -17,7 +17,7 @@ Um das Spiel zu starten, muss zuerst das Skript `main.py` ausgeführt werden. Da
 
 - **Gewinner anzeigen**: Listet alle gespeicherten Gewinner aus der Datenbank auf.
 - **Tic Tac Toe spielen**: Startet das Spiel mit der grafischen Benutzeroberfläche.
-- **Beenden**: Schließt die Anwendung.
+- **Beenden**: Schliesst die Anwendung.
 
 ### Passwortschutz
 Bevor das Spiel gestartet wird, ist die Eingabe des folgenden Passworts erforderlich:
@@ -26,7 +26,7 @@ Passwort: 1234
 ```
 
 ## Docker-Konfiguration
-Das Dockerfile im Repository setzt das offizielle Python-Image als Basis ein und installiert alle erforderlichen Abhängigkeiten, einschließlich Tkinter und SQLite.
+Das Dockerfile im Repository setzt das offizielle Python-Image als Basis ein und installiert alle erforderlichen Abhängigkeiten, einschliesslich Tkinter und SQLite.
 
 ### Erstellen des Docker-Images
 Führe den folgenden Befehl im Verzeichnis mit dem Dockerfile und den Dateien `main.py` und `gewinner.db` aus:
