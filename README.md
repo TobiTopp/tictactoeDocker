@@ -1,47 +1,52 @@
+Hier ist ein Beispiel für einen `README.md`-Inhalt, den du direkt in ein GitHub-Repository für dein Tic Tac Toe Projekt mit Tkinter und Docker einfügen kannst:
+
+```markdown
 # Tic Tac Toe Spiel mit Tkinter GUI
 
-Dies ist ein Tic Tac Toe Spiel mit einer grafischen Benutzeroberfläche, das mit Python und dem Tkinter-Modul erstellt wurde. Das Spiel ermöglicht es einem Benutzer, gegen einen anderen Benutzer zu spielen.
+## Übersicht
+Dieses Projekt umfasst ein Tic Tac Toe Spiel, das in Python mit dem Tkinter-Modul entwickelt wurde. Es bietet eine grafische Benutzeroberfläche und ermöglicht es zwei Spielern, gegeneinander anzutreten.
 
-# main.py
+## Hauptskript (main.py)
+Das Skript `main.py` enthält den gesamten Quellcode des Spiels sowie Funktionen zur Verwaltung einer SQLite-Datenbank (`gewinner.db`), die dazu dient, die Gewinner jeder Runde zu speichern.
 
-Dieses Python-Skript enthält den Quellcode für das Tic Tac Toe Spiel sowie Funktionen zum Verwalten von Gewinnern in einer SQLite-Datenbank.
+## Datenbank
+Die Datenbank `gewinner.db` ist mit dem Hauptskript verbunden und speichert die Namen der Gewinner nach jedem Spiel.
 
-# Datenbank 
+## Installation und Verwendung
+Um das Spiel zu starten, muss zuerst das Skript `main.py` ausgeführt werden. Das Hauptmenü bietet folgende Optionen:
 
-Zu dem main.py File ist eine Datenbank connected mit der Tabelle gewinner.db. In dieser Tabelle werden die Gewinner jedes mal nach einer gewonnenen Runde eingetragen.  
+- **Gewinner anzeigen**: Listet alle gespeicherten Gewinner aus der Datenbank auf.
+- **Tic Tac Toe spielen**: Startet das Spiel mit der grafischen Benutzeroberfläche.
+- **Beenden**: Schließt die Anwendung.
 
-# Benutzung
-
-Um das Spiel auszuführen, führe das Skript `main.py` aus. Es wird ein Hauptmenü angezeigt, das die folgenden Optionen enthält:
-
-1. **Gewinner anzeigen:** Zeigt eine Liste der bisherigen Gewinner aus der Datenbank an.
-2. **Tic Tac Toe spielen:** Startet das Tic Tac Toe Spiel mit grafischer Benutzeroberfläche.
-3. **Beenden:** Beendet das Programm.
-
-Bevor du das Spiel spielen kannst, wirst du aufgefordert, dich mit einem Passwort anzumelden.
-
+### Passwortschutz
+Bevor das Spiel gestartet wird, ist die Eingabe des folgenden Passworts erforderlich:
+```
 Passwort: 1234
+```
 
-# Dockerfile
+## Docker-Konfiguration
+Das Dockerfile im Repository setzt das offizielle Python-Image als Basis ein und installiert alle erforderlichen Abhängigkeiten, einschließlich Tkinter und SQLite.
 
-Das Dockerfile dient dazu, das Tic Tac Toe Spiel in einem Docker-Container auszuführen. Es verwendet das offizielle Python-Image als Basis und installiert die erforderlichen Abhängigkeiten, einschließlich Tkinter für die GUI und SQLite für die Datenbank.
+### Erstellen des Docker-Images
+Führe den folgenden Befehl im Verzeichnis mit dem Dockerfile und den Dateien `main.py` und `gewinner.db` aus:
+```bash
+docker build -t python-tictactoe .
+```
 
-# Verwendung
+### Ausführen des Docker-Containers
+Um das Spiel im Docker-Container zu starten, verwende:
+```bash
+docker run -it python-tictactoe
+```
 
-Um das Docker-Image zu erstellen, führe den folgenden Befehl im Verzeichnis aus, das das Dockerfile und die Dateien `main.py` und `gewinner.db` enthält:
+Stelle sicher, dass Docker auf deinem System korrekt installiert ist und du die notwendigen Rechte zur Ausführung von Docker-Befehlen hast.
 
-"docker build -t python-tictactoe ."
+## Wichtige Hinweise
+Für die Nutzung der grafischen Benutzeroberfläche ist ein funktionierendes Display notwendig. Fehlt ein solches, wird das Spiel im Textmodus ausgeführt.
 
+## Support
+Bei Fragen oder Problemen zu diesem Projekt kannst du dich jederzeit an Cem Akkaya oder Tobias Topp wenden.
+```
 
-Um das Spiel im Docker-Container auszuführen, verwende den folgenden Befehl:
-
-"docker run -it python-tictactoe"
-
-
-Stelle sicher, dass Docker auf deinem System installiert ist und dass du die erforderlichen Berechtigungen hast, um Docker-Befehle auszuführen.
-
-### Wichtiger Hinweis!
-
-Stelle sicher, dass du ein funktionierendes Display hast, wenn du das Spiel mit der grafischen Benutzeroberfläche spielen möchtest. Andernfalls wird das Spiel im Textmodus ausgeführt.
-
-Bei Fragen oder Problemen wende dich bitte an Cem Akkaya oder Tobias Topp.
+Dieser Text bietet eine klare und präzise Anleitung für Nutzer, die dein Projekt aus GitHub herunterladen und ausführen möchten. Du kannst diesen Inhalt direkt in deine `README.md`-Datei auf GitHub kopieren.
